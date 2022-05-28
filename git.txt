@@ -1,0 +1,74 @@
+
+
+Git commands
+------------
+
+connectivity
+https:      # expects user name and pwd while commiting the changes
+ssh:        # it will not as we exchange the key
+
+
+stages 
+1. untraked / modified X
+2. staged area
+3. local repo
+4. remote repo
+
+
+git init                                 # to initialize git on currenct directory
+git remote add origin <git repo URL>     # to add remote repo to localrepo
+
+git clone <git repo url>                 # to clone existing remote repo
+
+git fetch origin <branch name>  # get metadata or HEAD of that branch.
+git pull 
+        (optional)  origin <branch name>        # to pull the code from remote repo to local workspace
+git status          # to check the current status on present workspace
+git log             # to check the logs of previous commits
+git add          # to add the untracked files
+        .               # to add all the modified / new files to git from current dir
+        *               # all modified files
+        <file / dir name>   # to add a specific file or dir.
+
+git rm --cached <file>  # to remove the file from staged area to unstage
+
+git commit -m "<commit message>"        # to commit all the changes from staged area to local repo
+git push 
+        (optional)  origin <branch name>        # to push the code to remote repo from local repo
+
+
+
+git diff            # to see the diff between repo file and modified file in local
+
+git reset               # to reset committed changes to local repo and before pushing them to remote repo
+            --hard HEAD~1     # hard will take the previous commit and remove all the files which were there in it
+            --soft HEAD~1     # soft will take the previous commit and keep all our changes as staged area list.
+
+git revert  <commit id>    # to revert the pushed changes from remote repo
+
+
+git config --global user.email  "<email>"
+git config --global user.name  "<user name>"
+
+
+git branch          # to check the current breanch
+git branch <branch name>    # to create a new branch in local
+            -d <branch name> # deleates the branch from local repo
+            -D <branch name> # deletes the branch from local and remote repo as well
+
+git checkout <branch name>  # to switch the branch
+
+git checkout -b <branch name>  # will create new branch and checkout to that new branch
+
+
+git merge <branch name>  # to merge the changes from one branch to other
+
+
+git stash       # trash all the modified files and stores somewhere to get them later on
+git stash pop   # retrive the stashed files
+
+git cherry-pick <commit id>  # to get the changes from a specific commit of other branches
+
+
+conflicts
+
